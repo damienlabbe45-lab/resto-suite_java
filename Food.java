@@ -14,6 +14,18 @@ public class Food{
 
 
 
+    public String getName() {
+        return name;
+    }
+
+
+
+    public Double getPrice() {
+        return price;
+    }
+
+
+
     @Override
     public String toString() {
         return name + "   " + price + " euros \n\n";
@@ -82,8 +94,7 @@ public class Food{
 		new Food("KOUIGN-AMANN (GÂTEAU COMPLET)", 19.98), new Food("TARTE AU SUCRE (GATEAU COMPLET)", 10.98),
 		new Food("GRANDE ASSIETTE DE FROMAGE", 10.09)
 		
-	}};
+	}
+};
     }
-
-    
 }
