@@ -1,7 +1,7 @@
-public class FormulaDefy extends Formula{
+public class ChallengeMenu extends Menu{
     boolean win;
 
-    public FormulaDefy(String name, Food[][] foods, Double price) {
+    public ChallengeMenu(String name, Food[][] foods, Double price) {
         super(name, foods, price);
         win = false;
     }
