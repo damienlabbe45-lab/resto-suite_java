@@ -11,18 +11,17 @@ public class Formula extends Food{
     }
     @Override
     public String toString() {
+        String[] categories = {
+            "Entrée: \n", 
+            "Plats: \n", 
+            "Accompagnements: \n", 
+            "Boissons: \n", 
+            "Desserts: \n"
+        };
         int counter = 0;
-        String message = "Formule " + name + " à " + price + "euros : ";
+        String message = "Formule " + name + " à " + price + "e uros : ";
          while(foods.length > counter){
-            String variable = "";
-            if(counter == 0) variable = "Entrée: \n";
-            else{if(counter == 1) variable = "Plats: \n";
-                else{ if(counter == 2)variable = "Accompagnements:";
-                    else {if(counter == 3) variable = "Boissons: \n";
-                        else if(counter == 4){variable = "Desserts: \n";}
-                    }
-                }
-            }
+            String variable = categories[counter];
             message = message + variable;
             for(Food food: foods[counter]) message = message + food.getName() + "\n\n";
             counter++;
