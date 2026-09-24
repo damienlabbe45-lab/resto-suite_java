@@ -2,8 +2,8 @@
 
 public class Formula extends Food{
     private String name;
-    private Food[][] foods;
-    private Double price ;
+    protected Food[][] foods;
+    protected Double price ;
     public Formula(String name,Food[][] foods, Double price) {
         this.foods = foods;
         this.price = price;
