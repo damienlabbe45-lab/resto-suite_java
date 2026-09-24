@@ -1,14 +1,13 @@
-import java.io.BufferedOutputStream;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException; // Indispensable pour la gestion d'erreurs en Java 8
-import java.io.ObjectOutputStream;
 import java.util.Arrays;
 import java.util.Scanner; 
 import java.util.stream.IntStream;
 
 public class Resto {
-	public static void commande(int[] persons, ObjectOutputStream file , Scanner input) throws IOException{
+	public static void commande(int[] persons, BufferedWriter file , Scanner input) throws IOException{
 		String [] commande = new String [5];
 		String [] entree = {"SALADE","SOUPE","QUICHE","MELON","TOAST DE MOUSSE DE CANARD", "RADIS","OLIVES","TOMATES","AUCUNE","SAUCISSON","SAUMON"};
 		String [] plats = {"POULET","VEAU","BOEUF","MOUTON","CANARD","AGNEAU","OEUFS","TOFU","AUCUN","JAMBON","GALETTES AVEC DES OEUFS, DES CHAMPIGNONS, DU JAMBON, DU BEURRE ET DU FROMAGE RÂPÉE"};
@@ -28,7 +27,7 @@ public class Resto {
 			System.out.println("choix desserts: \n [1 - TARTE AUX POMMES] [2 - FONDANT AU CHOCOLAT] [3 - GATEAU AU YAOURT] [4 - CRÊPE AU SIROP D'ÉRABLE] [5 - MONT D'OR] [6 - ANANAS] [7 - MOUSSE AU CHOCOLAT] [8 - POMMES] [9 - COMPOTE DE POIRE] [10 - 20 COOKIES DE 34 CM] [11 - AUCUN] \n vous prendrez quoi comme desserts? [SAISSISEZ LE NOMBRE CORRESPONDANT]");
 			commande[4] = desserts[InputChoice(input)];
 			System.out.println("Résumé du repas numéro " + person + "\n\n\n:" + Arrays.toString(commande));
-			file.writeChars("************" + person + "\n\n" + Arrays.toString(commande));
+			file.write("************  Résumé de la commande N°" + person + "********************\n\n" + Arrays.toString(commande));
 	
 		}
 	}
@@ -49,9 +48,9 @@ public class Resto {
 		int[] persons = IntStream.range(1, InputInt(input) + 1).toArray();
 		
 
-		ObjectOutputStream file ;
+		BufferedWriter file ;
 		try{
-			file = new ObjectOutputStream(new BufferedOutputStream( new FileOutputStream(new File( "Order.txt"))));
+			file = new BufferedWriter( new FileWriter(new File( "Order.txt")));
 			commande(persons, file, input);
 			file.close();
 			input.close();
