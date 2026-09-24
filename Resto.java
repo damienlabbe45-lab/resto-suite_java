@@ -17,7 +17,7 @@ public class Resto {
 			System.out.println("repas numero " + person);
 			System.out.println("choix Entrée: \n [1 - SALADE] [2 - SOUPE] [3 - QUICHE] [4 - MELON] [5 - TOAST DE MOUSSE DE CANARD] [6 - RADIS] [7 - OLIVES] [8 - TOMATES] [9 - AUCUNE] [10 - SAUCISSON] [11 - SAUMON]\n vous prendrez quoi comme entrée? [SAISSISEZ LE NOMBRE CORRESPONDANT]");
 			commande[0] = entree[InputChoice(input)];
-			System.out.println("choix Plats: \n [1 - POULET] [2 - VEAU] [3 - BOEUF] [4 - MOUTON] [5 - CANARD] [6 - AGNEAU] [7 - OEUFS] [8 - TOFU] [9 - AUCUN] [10 - JAMBON] [11 - GALETTES AVEC DES OEUFS, DES CHAMPIGNONS, DU JAMBON, DU BEURRE ET DU FROMAGE RÂPÉE \n vous prendrez quoi comme plats? [SAISSISEZ LE NOMBRE CORRESPONDANT]");
+			System.out.println("choix Plats: \n [1 - POULET] [2 - VEAU] [3 - BOEUF] [4 - MOUTON] [5 - CANARD] [6 - AGNEAU] [7 - OEUFS] [8 - TOFU] [9 - AUCUN] [10 - JAMBON] [11 - GALETTES AVEC DES OEUFS, DES CHAMPIGNONS, DU JAMBON, DU BEURRE ET DU FROMAGE RÂPÉE] \n vous prendrez quoi comme plats? [SAISSISEZ LE NOMBRE CORRESPONDANT]");
 			commande[1] = plats[InputChoice(input)];
 			System.out.println("choix accompagnements: \n [1 - FRITES] [2 - RIZ] [3 - PATES] [4 - CAROTTES] [5 - ORANGES BLEUES] [6 - POMMES DE TERRE DAUPHINE] [7 - SALADE] [8 - HARICOTS VERTS] [9 - FLAGEOLETS] [10 - AUCUN] [11 - SALADE DE FRUITS COMPOSÉE DE MANGUES, BANANES, NOIX, RAISINS SECS, NECTARINES, FRAISES, FRAMBOISES, CERISES, KIWIS ET MANDARINES] \n vous prendrez quoi pour accompagner vos plats? [SAISSISEZ LE NOMBRE CORRESPONDANT]");
 			commande[2] = accompagnements[InputChoice(input)];
