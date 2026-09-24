@@ -89,8 +89,8 @@ public class Resto {
 			commande[4] = food[4] [InputChoice(input)];
 
 			String com =commande[0].toString() + commande[1].toString() + commande[2].toString() + commande[3].toString() + commande[4].toString();
-			System.out.println("Résumé du repas numéro " + person + ":\n\n" + com);
-			file.write("************  Résumé de la commande N°" + person + "********************\n\n" +com);
+			System.out.println("Résumé du repas numéro " + person + ":\n\n" + com + "\n\n" + Food.priceCommande(commande));
+			file.write("************  Résumé de la commande N°" + person + "********************\n\n" + com + "\n\n" + Food.priceCommande(commande));
 	
 		}
 	}
