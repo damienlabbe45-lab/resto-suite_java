@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class Resto {
-	public static void commande(int[] persons, ObjectOutputStream file , Scanner input){
+	public static void commande(int[] persons, ObjectOutputStream file , Scanner input) throws IOException{
 		String [] commande = new String [5];
 		String [] entree = {"SALADE","SOUPE","QUICHE","MELON","TOAST DE MOUSSE DE CANARD", "RADIS","OLIVES","TOMATES","AUCUNE","SAUCISSON","SAUMON"};
 		String [] plats = {"POULET","VEAU","BOEUF","MOUTON","CANARD","AGNEAU","OEUFS","TOFU","AUCUN","JAMBON","GALETTES AVEC DES OEUFS, DES CHAMPIGNONS, DU JAMBON, DU BEURRE ET DU FROMAGE RÂPÉE"};
