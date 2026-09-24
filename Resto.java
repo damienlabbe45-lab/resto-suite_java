@@ -1,3 +1,7 @@
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Arrays;
 import java.util.Scanner; 
 import java.util.stream.IntStream;
@@ -17,13 +21,14 @@ public class Resto {
 		if( args.length > 0) throw new IllegalArgumentException(" pas d'arguments");
 		Scanner input = new Scanner(System.in);
 		System.out.println("Combien serez vous pour le repas");
-		int[] persons = IntStream.range(1, InputInt(input)+1).toArray();
+		int[] persons = IntStream.range(1, InputInt(input) + 1).toArray();
 		String [] commande = new String [5];
 		String [] entree = {"SALADE","SOUPE","QUICHE","MELON","TOAST DE MOUSSE DE CANARD", "RADIS","OLIVES","TOMATES","AUCUNE","SAUCISSON","SAUMON"};
 		String [] plats = {"POULET","VEAU","BOEUF","MOUTON","CANARD","AGNEAU","OEUFS","TOFU","AUCUN","JAMBON","GALETTES AVEC DES OEUFS, DES CHAMPIGNONS, DU JAMBON, DU BEURRE ET DU FROMAGE RÂPÉE"};
 		String [] accompagnements = {"FRITES","RIZ","PATES","CAROTTES","ORANGES BLEUES","POMME DE TERRE DAUPHINE","SALADE","HARICOTS VERTS","FLAGEOLETS","AUCUN","SALADE DE FRUITS COMPOSÉE DE MANGUES, BANANES, NOIX, RAISINS SECS, NECTARINES, FRAISES, FRAMBOISES, CERISES, KIWIS ET MANDARINES"};
 		String [] boissons = {"EAU","AUCUN","CIDRE","JUS D'ORANGE","WHISKY","VIN JAUNE","VIN ROUGE","VIN BLANC","FUZE TEA","JUS DE RAISIN","SIROP à L'EAU"};
 		String [] desserts = {"TARTE AUX POMMES","FONDANT AU CHOCOLAT","GATEAU AU YAOURT","CRÊPE AU SIROP D'ÉRABLE","MONT D'OR","ANANAS","MOUSSE AU CHOCOLAT","POMMES","COMPOTE DE POIRE","20 COOKIES DE 34 CM","AUCUN"};
+		ObjectOutputStream file = new ObjectOutputStream(new BufferedInputStream( new FileInputStream(new File( "Order.txt"))));
 		for(int person:persons) {
 			System.out.println("repas numero " + person);
 			System.out.println("choix Entrée: \n [1 - SALADE] [2 - SOUPE] [3 - QUICHE] [4 - MELON] [5 - TOAST DE MOUSSE DE CANARD] [6 - RADIS] [7 - OLIVES] [8 - TOMATES] [9 - AUCUNE] [10 - SAUCISSON] [11 - SAUMON]\n vous prendrez quoi comme entrée? [SAISSISEZ LE NOMBRE CORRESPONDANT]");
@@ -37,8 +42,10 @@ public class Resto {
 			System.out.println("choix desserts: \n [1 - TARTE AUX POMMES] [2 - FONDANT AU CHOCOLAT] [3 - GATEAU AU YAOURT] [4 - CRÊPE AU SIROP D'ÉRABLE] [5 - MONT D'OR] [6 - ANANAS] [7 - MOUSSE AU CHOCOLAT] [8 - POMMES] [9 - COMPOTE DE POIRE] [10 - 20 COOKIES DE 34 CM] [11 - AUCUN] \n vous prendrez quoi comme desserts? [SAISSISEZ LE NOMBRE CORRESPONDANT]");
 			commande[4] = desserts[InputChoice(input)];
 			System.out.println("Résumé du repas numéro " + person + "\n\n\n:" + Arrays.toString(commande));
+			file.writeChars("************" + person + "\n\n" + Arrays.toString(commande));
 		}
 		input.close();
+		file.close();
 		System.out.println("Bon repas et bon appétit tout les " + persons.length + ".  ^^");
 	}
 
