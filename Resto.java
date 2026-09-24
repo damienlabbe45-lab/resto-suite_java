@@ -8,28 +8,28 @@ import java.util.stream.IntStream;
 public class Resto {
 	public static void commande(int[] persons, BufferedWriter file , Scanner input) throws IOException{
 		Food [] commande = new Food [5];
-		Food[][] food = {{new Food("SALADE", 3.56), 
-		new Food("SOUPE", 2.01),
-		new Food("QUICHE", 7.89),
-		new Food("MELON", 4.56),
-		new Food("TOAST DE MOUSSE DE CANARD", 9.08), 
-		new Food("RADIS", 6.76), 
-		new Food("OLIVES", 5.43),
-		new Food("TOMATES", 3.78),
+		Food[][] food = {{new Food("SALADE SERTE AVEC DU CHèVRE", 3.56), 
+		new Food("SOUPE AU POISSON  à LA TOMATE, à LA MENTHE et à LA CAROTTE", 9.01),
+		new Food("MINI QUICHE LORRAINE", 7.89),
+		new Food("MELON COMPLET", 4.56),
+		new Food("6 TOAST DE MOUSSE DE CANARD", 9.08), 
+		new Food("23 RADIS avec du beurre", 6.76), 
+		new Food("23 OLIVES", 5.43),
+		new Food("9 TOMATES", 3.78),
 		new Food("AUCUNE", 0.00),
-		new Food("SAUCISSON", 9.00),
-		new Food("SAUMON", 7.01)},
-	{new Food("POULET", 3.67),
-	new Food("VEAU", 11.98),
-	new Food("BOEUF", 20.65),
-	new Food("MOUTON", 14.89),
-	new Food("CANARD", 5.56),
-	new Food("AGNEAU", 3.99),
-	new Food("OEUFS", 4.43),
-	new Food("TOFU", 38.90),
+		new Food("SAUCISSON PURE PORC ", 9.00),
+		new Food("CAVIARD", 19.89)},
+	{new Food("POULET RÔTI", 11.67),
+	new Food("BLANQUETTE DE VEAU", 11.98),
+	new Food("FAUX FILET DE BOEUF", 34.65),
+	new Food("MOUTON AU MIEL ET AUX éPICES", 14.89),
+	new Food("MAGRET DE CANARD", 19.56),
+	new Food("CÖTES D'AGNEAU RÔTI", 13.99),
+	new Food("OMELETTE FAçON PAYSANNE AUX CHAMPIGNONS, à LA CRèME FRAÎCHE, AU SUCRE ET AU BEURRE", 7.43),
+	new Food("5 KG DE TOFU", 38.90),
 	new Food("AUCUN", 0.00),
-	new Food("JAMBON", 13.45),
-	new Food("GALETTES AVEC DES OEUFS, DES CHAMPIGNONS, DU JAMBON, DU BEURRE ET DU FROMAGE RÂPÉE", 5.01)
+	new Food("4 TRANCHES DE JAMBON", 13.45),
+	new Food("1 GALETTE AVEC DES OEUFS, DES CHAMPIGNONS, DU JAMBON, DU BEURRE ET DU FROMAGE RÂPÉE", 5.01)
 	},
 	{
 		new Food("FRITES", 2.12),
@@ -45,16 +45,16 @@ public class Resto {
 		new Food("SALADE DE FRUITS COMPOSÉE DE MANGUES, BANANES, NOIX, RAISINS SECS, NECTARINES, FRAISES, FRAMBOISES, CERISES, KIWIS ET MANDARINES",5.09)
 	}, 
 	{
-		new Food("EAU", 0.00),
+		new Food("CARAFE D'EAU", 0.00),
 		new Food("AUCUN",0.00),
-		new Food("CIDRE", 10.09),
-		new Food("JUS D'ORANGE", 5.09),
-		new Food("WHISKY", 45.89),
-		new Food("VIN JAUNE", 24.81),
-		new Food("VIN ROUGE", 25.80),
-		new Food("VIN BLANC", 25.59),
-		new Food("FUZE TEA", 6.78),
-		new Food("JUS DE RAISIN", 5.90),
+		new Food("BOLéE DE CIDRE", 10.09),
+		new Food("VERRE DE JUS D'ORANGE", 5.09),
+		new Food("VERRE DE WHISKY", 45.89),
+		new Food("VERRE DE VIN JAUNE", 24.81),
+		new Food("VERRE DE VIN ROUGE", 25.80),
+		new Food("VERRE DE VIN BLANC", 25.59),
+		new Food("BOUTEILLE DE FUZE TEA", 6.78),
+		new Food("VERRE DE JUS DE RAISIN", 5.90),
 		new Food("SIROP à L'EAU", 3.89)
 	},
 	{
@@ -67,7 +67,7 @@ public class Resto {
 		new Food("MOUSSE AU CHOCOLAT", 3.67),
 		new Food("POMMES", 2.97),
 		new Food("COMPOTE DE POIRE", 3.12),
-		new Food("20 COOKIES DE 34 CM", 5.01),
+		new Food("20 COOKIES DE 34 CM", 35.01),
 		new Food("AUCUN", 0.00)
 	}};
 	
