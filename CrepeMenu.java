@@ -1,6 +1,6 @@
-public class Formulacrepe extends  Formula{
+public class CrepeMenu extends  Menu{
     private int countercrepes;
-    public Formulacrepe(String name, Food[][] foods) {
+    public CrepeMenu(String name, Food[][] foods) {
         super(name, foods, 0.00);
         countercrepes = 0;
     }
