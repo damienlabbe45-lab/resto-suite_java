@@ -1,12 +1,14 @@
-import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException; // Indispensable pour la gestion d'erreurs en Java 8
 import java.io.ObjectOutputStream;
 import java.util.Arrays;
 import java.util.Scanner; 
 import java.util.stream.IntStream;
 
 public class Resto {
+	
 	public static int InputInt(Scanner input) {
 		while(!input.hasNextInt()) input.next();
 		return input.nextInt();
@@ -28,7 +30,7 @@ public class Resto {
 		String [] accompagnements = {"FRITES","RIZ","PATES","CAROTTES","ORANGES BLEUES","POMME DE TERRE DAUPHINE","SALADE","HARICOTS VERTS","FLAGEOLETS","AUCUN","SALADE DE FRUITS COMPOSÉE DE MANGUES, BANANES, NOIX, RAISINS SECS, NECTARINES, FRAISES, FRAMBOISES, CERISES, KIWIS ET MANDARINES"};
 		String [] boissons = {"EAU","AUCUN","CIDRE","JUS D'ORANGE","WHISKY","VIN JAUNE","VIN ROUGE","VIN BLANC","FUZE TEA","JUS DE RAISIN","SIROP à L'EAU"};
 		String [] desserts = {"TARTE AUX POMMES","FONDANT AU CHOCOLAT","GATEAU AU YAOURT","CRÊPE AU SIROP D'ÉRABLE","MONT D'OR","ANANAS","MOUSSE AU CHOCOLAT","POMMES","COMPOTE DE POIRE","20 COOKIES DE 34 CM","AUCUN"};
-		ObjectOutputStream file = new ObjectOutputStream(new BufferedInputStream( new FileInputStream(new File( "Order.txt"))));
+		ObjectOutputStream file = new ObjectOutputStream(new BufferedOutputStream( new FileOutputStream(new File( "Order.txt"))));
 		for(int person:persons) {
 			System.out.println("repas numero " + person);
 			System.out.println("choix Entrée: \n [1 - SALADE] [2 - SOUPE] [3 - QUICHE] [4 - MELON] [5 - TOAST DE MOUSSE DE CANARD] [6 - RADIS] [7 - OLIVES] [8 - TOMATES] [9 - AUCUNE] [10 - SAUCISSON] [11 - SAUMON]\n vous prendrez quoi comme entrée? [SAISSISEZ LE NOMBRE CORRESPONDANT]");
