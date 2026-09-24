@@ -7,24 +7,16 @@ public class Food{
         this.price = price;
     }
 
-    
-
     public Food() {
     }
-
-
 
     public String getName() {
         return name;
     }
 
-
-
     public Double getPrice() {
         return price;
     }
-
-
 
     @Override
     public String toString() {
