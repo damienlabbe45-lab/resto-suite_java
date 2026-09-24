@@ -1,10 +1,10 @@
 
 
-public class Formula extends Food{
+public class Menu extends Food{
     private String name;
     protected Food[][] foods;
     protected Double price ;
-    public Formula(String name,Food[][] foods, Double price) {
+    public Menu(String name,Food[][] foods, Double price) {
         this.foods = foods;
         this.price = price;
         this.name = name;
