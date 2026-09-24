@@ -25,7 +25,7 @@ public class Resto {
 			commande[3] = boissons[InputChoice(input)];
 			System.out.println("choix desserts: \n [1 - TARTE AUX POMMES] [2 - FONDANT AU CHOCOLAT] [3 - GATEAU AU YAOURT] [4 - CRÊPE AU SIROP D'ÉRABLE] [5 - MONT D'OR] [6 - ANANAS] [7 - MOUSSE AU CHOCOLAT] [8 - POMMES] [9 - COMPOTE DE POIRE] [10 - 20 COOKIES DE 34 CM] [11 - AUCUN] \n vous prendrez quoi comme desserts? [SAISSISEZ LE NOMBRE CORRESPONDANT]");
 			commande[4] = desserts[InputChoice(input)];
-			String com =commande[0] + "\n\n" + commande[1] + "\n\n" + "\n\n" + commande[2] + "\n\n" + commande[3] + "\n\n" + commande[4];
+			String com =commande[0] + "\n\n" + commande[1] + "\n\n" + commande[2] + "\n\n" + commande[3] + "\n\n" + commande[4];
 			System.out.println("Résumé du repas numéro " + person + ":\n\n" + com + "\n\n");
 			file.write("************  Résumé de la commande N°" + person + "********************\n\n" +com + "\n\n");
 	
